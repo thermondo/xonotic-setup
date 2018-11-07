@@ -32,6 +32,15 @@ Download the latest version from https://www.xonotic.org/download/
 
 5.  Lauch Xonotic. If you are lauching the app for the first time you
     will need to override macOS GateKeeper.
+    
+### Docker (server only)
+
+```
+docker pull detrate/xonotic-docker
+docker run --name xonotic-server -d detrate/xonotic-docker:stable
+```
+
+See also: https://github.com/z/xonotic-docker
 
 ## Xonotic Map Manager
 
