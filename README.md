@@ -23,16 +23,42 @@ Download the latest version from https://www.xonotic.org/download/
     ```
     cp ~/Library/Application\ Support/xonotic/data/config.cfg
     ```
-   
+
     If you have an old config folder, make sure to remove it:
-   
+
     ```
     rm -rf ~/Library/Application\ Support/xonotic/
     ```
 
 5.  Lauch Xonotic. If you are lauching the app for the first time you
     will need to override macOS GateKeeper.
-    
+
+### Dedicated Server setup (debian)
+
+You will need to be root to install the server, simply copy&paste the following
+commands:
+
+```bash
+curl -Lo- https://github.com/Thermondo/xonotic-setup/archive/master.tar.gz | tar xzf - -C /tmp
+/tmp/xonotic-setup-master/install-debian-server.sh
+```
+
+It download and run an install script. The script will ask you about which
+version to install.
+
+The script will install Xonotic, `xmm` and a HTTP server to serve custom maps.
+It will create the new `systemd` services `xonotic` and `xonoitc-maps`.
+It will also create a new user named `xonotic` to isolate the installation.
+
+You can install new maps via:
+
+```
+su xonotic -c "xmm install MAP_NAME"
+# are you are do installing maps you will need to restart the server
+systemctl restart xonotic
+systemctl restart xonotic-maps
+```
+
 ### Docker (server only)
 
 ```
