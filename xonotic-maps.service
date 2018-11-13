@@ -9,7 +9,7 @@ Restart=always
 RestartSec=1
 User=xonotic
 WorkingDirectory=/home/xonotic/.xonotic/data
-ExecStart=python3 -m http.server
+ExecStart=/usr/bin/python3 -m http.server
 
 [Install]
 WantedBy=multi-user.target
