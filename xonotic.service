@@ -7,7 +7,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=xonotic
-ExecStart=xonotic-dedicated
+ExecStart=/usr/local/bin/xonotic-dedicated
 
 [Install]
 WantedBy=multi-user.target
