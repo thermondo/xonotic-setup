@@ -17,7 +17,7 @@ make install
 popd
 
 adduser --disabled-password --gecos "" xonotic
-echo 'export PATH="$PATH:$HOME/.local/bin"' > /home/xonotic/.bashrc
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> /home/xonotic/.bashrc
 
 su xonotic -c 'mkdir -p /home/xonotic/.xonotic/data'
 su xonotic -c "cp $BASE_DIR/server.cfg /home/xonotic/.xonotic/data/server.cfg"
